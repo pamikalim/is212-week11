@@ -8,7 +8,7 @@ class OrderProcessor:
         self.send_confirmation_email(order, receipt)
         return receipt
     
-    def validate_order(self, order):
+    def validate_order(self, order): 
         if not order.get("customer_id"):
             raise ValueError("Customer ID is required.")
         if not order.get("items"):
